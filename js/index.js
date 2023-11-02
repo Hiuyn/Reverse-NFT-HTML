@@ -12,8 +12,8 @@
 
 // hieuUngDanhChu()
 
-let parallax1 = document.getElementById('parallax1')
-let parallax2 = document.getElementById('parallax2')
+// let parallax1 = document.getElementById("parallax1");
+// let parallax2 = document.getElementById("parallax2");
 
 // window.addEventListener('scroll', () => {
 //   let value = window.scrollY
