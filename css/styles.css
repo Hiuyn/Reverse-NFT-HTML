@@ -237,8 +237,9 @@ header .navbar .navbar-menu ul>li>a.active {
   background: #8d9df7;
   cursor: pointer;
 }
+
 .circle-arrow-svg:hover svg path {
-    fill: #fff;
+  fill: #fff;
 }
 
 .title-section1 {
@@ -916,12 +917,12 @@ header .navbar .navbar-menu ul>li>a.active {
 
 .carousel_charater {
   position: absolute;
-    top: 5560px;
-    z-index: 5;
-    width: 1600px;
-    left: 0;
-    right: 0;
-    margin: auto;
+  top: 5560px;
+  z-index: 5;
+  width: 80%;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .swiper {
@@ -930,25 +931,20 @@ header .navbar .navbar-menu ul>li>a.active {
   padding-top: 500px;
   padding-bottom: 500px;
 }
-.swiper-slide{
-  /* border: 1px solid transparent;
-  background-color: rgb(255 255 255 / 50%);
-  border-radius: 1rem; */
+
+.swiper-slide {
   width: 400px !important;
 }
-.swiper [class^="swiper-button-"]::after{
+
+.swiper [class^="swiper-button-"]::after {
   content: "" !important;
 }
-/*adjust arrow size*/
-.swiper [class^="swiper-button-"]{
+
+.swiper [class^="swiper-button-"] {
   width: 55px;
   height: 55px;
 }
 
-/*adjust arrow position*/
-/* .swiper .swiper-button-next{
-  right: -5px;
-}*/
-.swiper .swiper-button-prev svg{
+.swiper .swiper-button-prev svg {
   transform: rotate(180deg);
 }
