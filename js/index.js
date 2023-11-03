@@ -29,3 +29,6 @@
 //   // parallax1.style.top = -value + 50 + 666 + 'px'
 //   // parallax2.style.top = -value + 50 + 769 + 'px'
 // })
+
+var tl = gsap.timeline({duration: 1})
+tl.fromTo("#parallax1", { y: 200 }, { y: 0 })

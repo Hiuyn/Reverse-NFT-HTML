@@ -1,133 +1,3 @@
-/* html{
-    scroll-behavior: smooth;
-    font-family: ABCWhytePlus;
-}
-body {
-    margin: 0;
-    padding: 0;
-    background-color: black;
-}
-
-header {
-    padding: 50px;
-    height: 100%;
-    position: -webkit-sticky;
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-header .screen_frame {
-    border: 1px solid white;
-    height: calc(100% - 100px);
-    width: calc(100% - 100px);
-    border-radius: 15px;
-    position: sticky;
-}
-
-header .screen_frame .menu_navbar {
-    display: flex;
-    border-bottom: 1px solid white;
-}
-
-header .screen_frame .menu_navbar .menu {
-    border-right: 1px solid white;
-    width: 52px;
-    height: 52px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-header .screen_frame .menu_navbar ul {
-    color: white;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    align-items: center;
-    width: 100%;
-}
-
-header .screen_frame .menu_navbar ul>li>a {
-    text-transform: uppercase;
-    text-decoration: unset;
-    color: white;
-    opacity: 0.8;
-}
-
-header .screen_frame .menu_navbar ul>li>a.active {   
-    opacity: 1;
-    transition: transform 3s;
-}
-header .screen_frame .menu_navbar ul>li>a:hover {   
-    opacity: 1;
-    background: white;
-    color: black;
-}
-
-header .screen_frame .menu_logo {
-    display: flex;
-    height: 100%;    
-}
-
-header .screen_frame .menu_logo .logo {
-    width: 50px;
-    border-right: 1px solid white;
-    height: calc(100% - 52px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-header .screen_frame .menu_logo .screen_content {
-    width: 100%;
-    height: calc(100% - 52px);
-}
-
-.main section {
-    height: 100vh;
-}
-.main section img{
-    width: 100%;
-    height: 100%;
-}
-
-.screen_content{
-    position: absolute;
-    top: 104px;
-    left: 100px;
-    right: 50px;
-    padding: 30px;
-    bottom: 50px;
-}
-
-.type_body{
-    font-feature-settings: "zero" on;
-    font-size: 1.5rem;
-    font-variation-settings: "opsz" 0;
-    font-weight: 400;
-    letter-spacing: -.02em;
-    line-height: 1.3;
-    margin: 0;
-}
-
-.content_description{
-    width: 29.6rem;
-    color: white
-}
-
-.content__title {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    font-family: ABCWhytePlus;
-    font-size: 8.05vw;
-    font-variation-settings: "wght" 700,"opsz" .5;
-    letter-spacing: -.08em;
-    line-height: .7;
-    text-transform: uppercase;
-} */
-
 * {
   box-sizing: border-box;
 }
@@ -177,14 +47,73 @@ header .navbar .navbar-menu ul {
 
 header .navbar .navbar-menu ul > li {
   border-radius: 5px;
-  padding: 8px 38px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 36px;
 }
+header .navbar .navbar-menu ul > li::before {
+  content: '';
+  position: absolute;
+  width: 150%;
+  height: 150%;
+}
+header .navbar .navbar-menu ul > li::after {
+  content: '';
+  width: 145px;
+  height: 30px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+header .navbar .navbar-menu ul > li:nth-child(1)::after {
+  content: 'STORY';
+}
+header .navbar .navbar-menu ul > li:nth-child(2)::after {
+  content: 'GALLERY';
+}
+header .navbar .navbar-menu ul > li:nth-child(3)::after {
+  content: 'COMMUNITY';
+}
+header .navbar .navbar-menu ul > li:nth-child(4)::after {
+  content: 'OUR LAB';
+}
+header .navbar .navbar-menu ul > li:nth-child(5)::after {
+  content: 'ABOUT';
+}
+header .navbar .navbar-menu ul > li:hover::before {
+  animation: animate 2s linear infinite;
+  background: conic-gradient(from 90deg, rgb(0 0 0 / 0%) 70%, rgb(11 78 230 / 9%) 80%, rgb(0 270 255) 100%);
+}
+header .navbar .navbar-menu ul > li:hover::after {
+  background: #0e0e0e;
+}
+
+@keyframes animate {
+  0% {
+		transform: rotate(0deg);
+	}
+  100% {
+		transform: rotate(360deg);
+	}
+}
+
+
 
 header .navbar .navbar-menu ul > li > a {
   text-transform: uppercase;
   text-decoration: unset;
   color: white;
   opacity: 0.8;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 header .navbar .navbar-menu ul > li > a.active {
@@ -192,11 +121,11 @@ header .navbar .navbar-menu ul > li > a.active {
   transition: transform 3s;
 }
 
-header .navbar .navbar-menu ul > li > a:hover {
+/* header .navbar .navbar-menu ul > li > a:hover {
   opacity: 1;
   background: white;
   color: black;
-}
+} */
 
 .navbar-link-contact {
   display: flex;
@@ -415,7 +344,7 @@ header .navbar .navbar-menu ul > li > a:hover {
 .background-space-section2 {
   position: absolute;
   z-index: 1;
-  width: 1812px;
+  width: 100%;
   height: 2497px;
   left: -2.5%;
 }
@@ -533,6 +462,9 @@ header .navbar .navbar-menu ul > li > a:hover {
   box-shadow: 0px 10px 6px 0px #0000000d, #ffffff40 0px 2px 1px 0px inset,
     #ffffff1a 0px -1px 1px 0px inset;
 }
+.border-item .item img{
+  border-radius: 10px;
+}
 
 .border-charater {
   padding-top: 354px;
@@ -561,11 +493,10 @@ header .navbar .navbar-menu ul > li > a:hover {
   width: 250px;
   height: 250px;
   border-radius: 10px;
-  /* background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-        linear-gradient(0deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.01)); */
   border: 1px solid #ffffff80;
   box-shadow: 0px 10px 6px 0px #0000000d, #ffffff40 0px 2px 1px 0px inset,
     #ffffff1a 0px -1px 1px 0px inset;
+    overflow: hidden;
 }
 
 .container-section3 {
@@ -899,4 +830,31 @@ header .navbar .navbar-menu ul > li > a:hover {
 .infor-footer-right-copyright {
   align-self: end;
   justify-self: end;
+}
+/* .demo-button:hover::before{
+content: "";
+background-image: conic-gradient(
+  #ff0052 20deg, transparent 120deg
+);
+width: 150%;
+height: 150%;
+position: absolute;
+animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+} */
+
+.charater:hover img {
+  transform: scale(1.3);
+  transition: 1.5s;
+}
+.charater.active img{
+  transform: scale(1.3)
 }
