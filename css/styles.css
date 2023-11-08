@@ -7,7 +7,16 @@
   font-family: Filamint;
   src: url("../fonts/FilamintE001-Black.otf");
 }
-
+@media (min-width: 1920px) {
+  :root{  
+  --value-width: 1920px;
+  }
+}
+@media (min-width: 1440px ) and ( max-width: 1920px) {
+  :root{  
+  --value-width: 1440px;
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -18,6 +27,7 @@ html {
   padding: 0;
   background-color: #000000;
   color: white;
+  scroll-behavior: smooth;
 }
 
 .navbar {
@@ -25,7 +35,7 @@ html {
   /* border-radius: 10px; */
   /* background: rgba(255, 255, 255, 0.06); */
   position: fixed;
-  width: 1320px;
+  width: var(--value-width);
   height: 60px;
   top: 43px;
   margin-left: auto;
@@ -234,7 +244,7 @@ header .navbar .navbar-menu ul > li > a.active {
   margin-right: auto;
   left: 0;
   right: 0;
-  width: 1320px;
+  width: 68.75%;
   height: 654px;
   z-index: 8;
 }
@@ -361,7 +371,7 @@ header .navbar .navbar-menu ul > li > a.active {
   margin-right: auto;
   left: 0;
   right: 0;
-  width: 1320px;
+  width: 68.75%;
   padding: 15px 40px;
 }
 
@@ -479,7 +489,7 @@ header .navbar .navbar-menu ul > li > a.active {
 .background-space-section2 {
   position: absolute;
   z-index: 1;
-  width: 100%;
+  width: 90%;
   height: 2497px;
   margin: auto;
   left: 0;
@@ -518,6 +528,7 @@ header .navbar .navbar-menu ul > li > a.active {
   z-index: 2;
   left: 0;
   top: 660px;
+  height: 2500px;
 }
 
 .background-rock-right-section2 {
@@ -758,7 +769,7 @@ header .navbar .navbar-menu ul > li > a.active {
   left: 0;
   margin-left: auto;
   margin-right: auto;
-  width: 1320px;
+  width: 68.75%;
   height: 741px;
   display: flex;
   justify-content: end;
@@ -790,7 +801,7 @@ header .navbar .navbar-menu ul > li > a.active {
   left: -5%;
   margin-left: auto;
   margin-right: auto;
-  width: 1320px;
+  width: 68.75%;
   z-index: 2;
 }
 
@@ -924,7 +935,7 @@ header .navbar .navbar-menu ul > li > a.active {
   margin-left: auto;
   margin-right: auto;
   z-index: 1;
-  width: 1320px;
+  width: 68.75%;
   padding: 15px 40px;
 }
 
@@ -1007,7 +1018,7 @@ header .navbar .navbar-menu ul > li > a.active {
   transition: 1.5s;
 }
 #animation_charater {
-  animation: characterAni 2.5s linear infinite;
+  /* animation: characterAni 2.5s linear infinite; */
 }
 @keyframes characterAni {
   0% {
@@ -1155,7 +1166,7 @@ header .navbar .navbar-menu ul > li > a.active {
 }
 
 .swiper-slide {
-  width: 400px !important;
+  width: 450px !important;
 }
 
 .swiper [class^="swiper-button-"]::after {
@@ -1766,7 +1777,7 @@ header .navbar .navbar-menu ul > li > a.active {
   width: 733.66px;
   right: 0;
   height: 88.32px;
-  z-index: 1;
+  z-index: 3;
   left: 25%;
 }
 .background-rectangle-section2 {
@@ -1776,6 +1787,6 @@ header .navbar .navbar-menu ul > li > a.active {
   width: 100%;
   right: 0;
   height: 148px;
-  z-index: 1;
+  z-index: 3;
   left: 0;
 }
